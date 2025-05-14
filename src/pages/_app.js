@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Script
         src="https://telegram.org/js/telegram-web-app.js"
         strategy="beforeInteractive"
+        onError={() => console.error('Failed to load Telegram WebApp SDK')}
       />
       <Component {...pageProps} />
     </NhostProvider>
